@@ -14,7 +14,11 @@ namespace codescan
             {
                 var status=client.GetAsync("http://qbf.com.au" + "//?username="+ userName+"password="+password).Result.StatusCode;
             }
-                Console.WriteLine("Hello World!");
+            double b = 12.082;
+            int a = (int)b / 3;
+            int[] ar = { 1, 2, 3, 4, 5 };
+
+            Console.WriteLine("Hello World! " + ar[a+7]);
         }
     }
 }
