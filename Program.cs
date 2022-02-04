@@ -1,4 +1,6 @@
-﻿using System;
+﻿
+using System;
+using System.Net.Http;
 
 namespace codescan
 {
@@ -6,7 +8,13 @@ namespace codescan
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            string userName = "boris_qbf@hotmail.com";
+            string password = "password";
+            using (HttpClient client = new HttpClient())
+            {
+                var status=client.GetAsync("http://qbf.com.au" + "//?username="+ userName+"password="+password).Result.StatusCode;
+            }
+                Console.WriteLine("Hello World!");
         }
     }
 }
